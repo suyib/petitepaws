@@ -1,0 +1,172 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --clr-buttons: #FFD863;
+    --clr-dark: #193F56;
+    --clr-light: #FDF3C0;
+    --clr-bluebg: #A6E1EB;
+    --clr-darkyellow: #FFA114;
+    --fw-normal: 400;
+    --fw-bold: 600;
+    --fw-black: 800;
+}
+
+a {
+  text-decoration: none;
+  color: var(--clr-dark);
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Comfortaa', sans-serif;
+  text-transform: uppercase; 
+}
+
+h1 {
+  font-size: 3rem; /* Larger size for the main heading */
+  font-weight: var(--fw-bold); /* Using a variable for font-weight */
+  max-width: 25rem;
+  line-height: 1.5;
+}
+
+h2 {
+  font-size: 2rem; /* Slightly smaller than h1 */
+  font-weight: var(--fw-bold);
+}
+
+h3 {
+  font-size: 1.75rem;
+  font-weight: var(--fw-normal);
+}
+
+h4 {
+  font-size: 1.5rem;
+  font-weight: var(--fw-normal);
+}
+
+h1, h2, h3, h4 {line-height: 1.3;}
+
+body {
+    font-family: 'Roboto Mono', sans-serif;
+    text-align: left;
+    font-size: 1rem;
+    color: var(--clr-dark);
+    line-height: 1.6;
+  }
+  
+  button {
+    display: flex;
+    height: 3.5em; /* 56px converted to em */
+    padding: 1em; /* 16px converted to em */
+    justify-content: center;
+    align-items: center;
+    border-radius: 1.25em; /* 20px converted to em */
+    border: 0.125em solid var(--dark, #193F56); /* Border width of 2px converted to em */
+    background: var(--button-yellow, #FFD863);
+    font-family: 'Comfortaa', sans-serif;
+    text-transform: uppercase;
+    font-weight: var(--fw-bold);
+    min-width: 120px;
+    color: var(--clr-dark);
+  }
+
+  button:hover {
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
+  }
+
+  button a {
+    color: inherit;
+  }
+
+button.secondary__button {
+  margin-top: 1.5em;
+  padding: 0.625em 1.25em;
+  font-size: 1rem;
+  border-radius: 1.25em;
+  border: 0.125em solid var(--clr-dark);
+  background: var(--clr-buttons);
+  text-transform: uppercase;
+  font-weight: var(--fw-bold);
+  display: inline-block; /* Make sure the button does not stretch */
+  max-width: 200px; /* Set a max-width for the button */
+  text-align: center; /* Center text within the button */
+  color: var(--clr-dark);
+}
+
+button.secondary__button:hover {
+  background-color: var(--clr-dark);
+  color: var(--clr-light)
+}
+
+button.secondary__button a {
+  color: inherit;
+}
+
+header {
+  margin: 0;
+  display: flex;
+  justify-content: space-between; /* Distributes space between items */
+  padding: 1em 3em;
+  align-items: center;
+  /* border-bottom: 1px solid var(--light-yellow, #FDF3C0);  */
+  font-family: 'Comfortaa', sans-serif;
+  background-color: var(--clr-bluebg);
+}
+
+.logo {
+    margin-top: 1em;
+}
+
+.nav__list {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+  max-width: 35rem;
+  padding: 1em;
+  list-style: none;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  font-weight: var(--fw-bold);
+  letter-spacing: 1px;
+}
+
+header .nav__list a {
+  color: var(--clr-dark)
+}
+
+header .nav__list a:hover {
+  color: var(--clr-light)
+}
+
+main {
+  display: flex;
+  padding: 2em;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  align-self: stretch;
+  background-color: var(--clr-bluebg);
+}
+
+.content {
+  display: flex;
+  align-items: center; /* Align items to the start */
+  gap: 5em; /* Space between image and text content */
+}
+
+.main-image {
+  max-width: 40%;
+  height: auto;
+  flex-shrink: 0; /* Prevent the image from shrinking */
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column; /* Stack text content vertically */
+  max-width: 600px; /* Limit the width of the text content */
+}
